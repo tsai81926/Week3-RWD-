@@ -1,0 +1,180 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*讓圖片隨網頁大小自適應延伸*/
+img{
+    max-width: 100%;
+    height:auto;
+}
+
+/*省去計算盒模型寬高*/
+*,*::before, *::after{
+    box-sizing:border-box;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 24px;
+}
+
+.logo a{
+    display: block;
+    width:250px;
+    height:250px;
+    background-image: url(/images/M1.png);
+    
+    /*下方依序設定是為隱藏a標籤之文字"LOGO"*/
+    text-indent: 101%;     /*做凸排效果，讓文字超出背景圖片*/ 
+    white-space: nowrap;   /*強制不換行，讓整串文字都超出背景圖片*/
+    overflow: hidden;     /*將超出之部分全部隱藏*/
+}
+
+.header-menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-menu a{
+    display: block;
+    background-color: #3399ff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-menu a:hover{
+    background-color: orange;
+}
+
+.main{
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content{
+    width: 75%;
+    padding:10px;
+    border: 2px solid    
+}
+
+.content h2{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+.content p{
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.aside{
+    border:2px solid; 
+    width:20%;
+    padding:5px 
+}
+.aside img{
+    margin-bottom: 10px;
+}
+
+.footer{
+    text-align: center;
+    padding:8px 0;
+}
+
+/*Pad多為768px，設767有較好使用者體驗*/
+@media (max-width:767px){
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo a{
+        width:150px;
+        height: 150px;
+        background-image: url(/images/M2.png);
+        margin-bottom: 20px;
+    }
+
+    /*設計在li，而非設計".header-menu"或".header-menu a"*/
+    .header-menu li{
+        width: 50%;
+        margin: 0 auto 10px auto;
+    }
+
+    .content{
+        margin-bottom: 20px;
+    }
+
+    .aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content, .aside{
+        width: 100%;
+    }
+    
+}
