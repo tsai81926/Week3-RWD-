@@ -77,7 +77,7 @@ img{
     display: block;
     width:250px;
     height:250px;
-    background-image: url(Week3-RWD-/images/M1.png);
+    background-image: url(./images/M1.png);
     
     /*下方依序設定是為隱藏a標籤之文字"LOGO"*/
     text-indent: 101%;     /*做凸排效果，讓文字超出背景圖片*/ 
@@ -154,7 +154,7 @@ img{
     .logo a{
         width:150px;
         height: 150px;
-        background-image: url(Week3-RWD-/images/M2.png);
+        background-image: url(./images/M2.png);
         margin-bottom: 20px;
     }
 
