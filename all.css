@@ -61,6 +61,8 @@ img{
 .container{
     max-width: 1000px;
     margin: 0 auto;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .header{
@@ -68,8 +70,6 @@ img{
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 20px;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-bottom: 24px;
 }
 
@@ -105,13 +105,10 @@ img{
 }
 
 .main{
-    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .content{
